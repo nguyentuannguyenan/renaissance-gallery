@@ -132,7 +132,7 @@ window.addEventListener("load", () => {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
 
-            const extraSlides = 2;
+            const extraSlides = 3;
 
             for (let i = -extraSlides; i < totalSlides + extraSlides; i++){
                 let slideY = -i * (slideHeight + gap);
