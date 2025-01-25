@@ -12,19 +12,19 @@ window.addEventListener("load", () => {
     let loadedImageCount = 0;
 
     function loadImages() {
-        for (let i = 1; i <= 7; i++) {
+        for (let i = 1; i <= 8; i++) {
             const img = new Image();
             img.onload = function () {
                 images.push(img);
                 loadedImageCount++;
 
-                if (loadedImageCount === 7) {
+                if (loadedImageCount === 8) {
                     initializeScene();
                 }
             };
             img.onerror = function () {
                 loadedImageCount++;
-                if (loadedImageCount === 7) {
+                if (loadedImageCount === 8) {
                     initializeScene();
                 }
             };
@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
         }
         parentGeometry.computeVertexNormals();
 
-        const totalSlides = 7;
+        const totalSlides = 8;
         const slideHeight = 15;
         const gap = 0.5;
         const cycleHeight = totalSlides * (slideHeight + gap);
@@ -113,20 +113,21 @@ window.addEventListener("load", () => {
         camera.rotation.z = THREE.MathUtils.degToRad(-5);
 
         const slideTitles = [
-            "Field Unit",
-            "Astra Convergence",
-            "Eclipse Core",
-            "Luminous",
-            "Serenity",
-            "Nebula Point",
-            "Horizon",
+            "The Creation of Adam",
+            "Mona Lisa",
+            "The birth of Venus",
+            "The Last Supper",
+            "The School of Athens",
+            "The Last Judgement",
+            "Venus of Urbino",
+            "Annunciation"
         ];
 
         function updateTexture (offset = 0) {
             ctx.fillStyle = "#000";
             ctx.fillRect(0, 0, textureCanvas.width, textureCanvas.height);
 
-            const fontSize = 180;
+            const fontSize = 150;
             ctx.font = `500 ${fontSize}px Dahlia`;
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
