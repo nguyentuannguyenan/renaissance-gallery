@@ -120,7 +120,7 @@ window.addEventListener("load", () => {
             "The School of Athens",
             "The Last Judgement",
             "Venus of Urbino",
-            "Annunciation"
+            "Annunciation",
         ];
 
         function updateTexture (offset = 0) {
